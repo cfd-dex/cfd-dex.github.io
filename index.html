@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CFD-DEX: A New Era in Decentralized Finance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .header img {
+            width: 200px;
+            height: auto;
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://github.com/jordan-public/cfd-dex/blob/main/doc/Logo.png?raw=true" alt="CFD-DEX Logo" />
+        <h1>CFD-DEX: Empowering DeFi with Flash Collaterals</h1>
+    </div>
+
+    <div class="content">
+        <div class="section">
+            <h2>Abstract</h2>
+            <p>
+                We introduce an innovative implementation of Flash borrowing known as Flash Collaterals, aimed at stabilizing blockchain DeFi protocols and liquidations. This allows for borrowing of funds for liquidation purposes, even in extremely illiquid markets. By creating "collateral" based on deposit of assets instead of enforcing cash balances, we're able to generate these collaterals, and return them in full, all within a single transaction.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Improved Efficiency of Liquidations</h2>
+            <p>
+                The system enables nimble and cost-effective liquidations executable by anyone, using only gas. This increases the stability and resilience of the protocols, protecting them from sudden price movements that could risk insolvency. This technique is applicable in any "cash settled" derivative protocols, such as Decentralized Exchanges (DEX) for Contracts for Difference (CFD), cash settled Options, Futures and much more.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>CFD DEX</h2>
+            <p>
+                Contracts for Difference (CFDs) are cash settled instruments. Users deposit collateral and can then trade pairs such as EUR/USD, settling in USDC. Purchasing a EUR/USD CFD does not lead to holding of any asset. When exiting this long position, the profit (or loss) is calculated based on the difference between entry and exit prices, which is then applied to the collateral. The user must provide enough collateral to meet the Entry Margin (usually 10%) and maintain collateralization above the Liquidation Margin (typically 5%) to avoid liquidation.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Liquidation</h2>
+            <p>
+                Any position undecollateralized below the Liquidation Margin can be liquidated by anyone. The liquidator needs to have enough collateral to assume the liquidated position and meet the Entry Margin collateralization. The liquidator is rewarded with an additional penalty from the liquidated position, typically 2% of the market value at the time of liquidation.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Flash Collaterals</h2>
+            <p>
+                If the liquidator lacks sufficient collateral to assume the liquidated position, the transaction reverts. However, the liquidator can borrow any desired amount of collateral - even amounts that do not exist anywhere - as long as they can return the borrowed collateral within the same blockchain transaction. Once the collateral is borrowed, the liquidator can execute multiple liquidations at the CFD DEX, take multiple bids and offers to offset the positions resulting from the liquidations. If this exercise is profitable, the user can return the borrowed "flash collateral" and complete the transaction with a profit.
+            </p>
+        </div>
+    </div>
+
+    <div class="footer" style="background-color: #333; color: #fff; text-align: center; padding: 20px 0; margin-top: 20px;">
+        <h2>Join the CFD-DEX Revolution</h2>
+        <p>Be part of the change in blockchain DeFi protocols. Let's create a more stable and efficient DeFi environment together.</p>
+    </div>
+</body>
+</html>
